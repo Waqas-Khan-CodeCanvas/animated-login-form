@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*####################### Header Styling #######################*/
+header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+    padding: 10px 20px;
+    background: transparent;
+}
+
+/*####################### Navigation Styling #######################*/
+nav {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 10px;
+    padding: 15px;
+}
+nav,
+.nav_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #F4F8D3;
+    margin: 5px;
+}
+
+.nav_item {
+    column-gap: 25px;
+}
+
+.nav_link {
+    font-size: 18px;
+    font-weight: bold;
+    color: #F4F8D3;
+    transition: all .5s;
+    margin: 10px;
+}
+
+.nav_link:hover {
+    color: white;
+    border-bottom: 2px solid rgb(255, 0, 0);
+}
+
+
+/*####################### Button Styling #######################*/
+.button {
+    padding: 8px 24px;
+    border: 1px solid #F4F8D3;
+    font-size: 16px;
+    font-weight: bold;
+    background: transparent;
+    color: #F4F8D3;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+button:hover {
+    color: black;
+    background: #FEF9E1;
+    border-color: #000;
+}
+
+
+/*####################### Home Section  #######################*/
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: #143D60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section-content {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff5c2;
+}
+
+
+/*####################### Overlay effect when login/signup is active #######################*/
+.home::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease-out;
+}
+
+.home.show::before {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*####################### Form Container #######################*/
+.form-container {
+    position: absolute;
+    max-width: 320px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 101;
+    background: #FEF9E1;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s ease-out;
+}
+
+.home.show .form-container {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*####################### Form Styling #######################*/
+.form h2 {
+    text-align: center;
+}
+
+.signup_form {
+    display: none;
+}
+
+.form-container.active .signup_form {
+    display: block;
+}
+
+.form-container.active .login_form {
+    display: none;
+}
+
+/*####################### Close Button  #######################*/
+.form_close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #999;
+    font-size: 22px;
+    opacity: .7;
+    cursor: pointer;
+}
+
+/*#######################  Input Field Styling #######################*/
+.input_box {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+}
+
+.input_box input {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 30px;
+    color: #333;
+    border: none;
+    outline: none;
+    transition: all .2s ease;
+    border-bottom: 1.5px solid #aaaaaa;
+    background-color: #FEF9E1;
+}
+
+.input_box input:focus {
+    border-color: #7d2ae8;
+    background-color: #FEF9E1;
+}
+
+.input_box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.input_box i.email,
+.input_box i.password {
+    left: 0;
+    color: #707070;
+}
+
+.input_box input:focus~i.email,
+.input_box input:focus~i.password {
+    color: #7d2ae8;
+}
+
+.input_box i.pw_hide {
+    right: 0;
+    font-size: 18px;
+    color: #707070;
+}
+
+/*####################### Options and Checkbox #######################*/
+.option_field {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.option_field a {
+    color: #7d2ae8;
+    font-size: 14px;
+}
+
+.option_field a:hover {
+    text-decoration: underline;
+}
+
+.checkbox {
+    display: flex;
+    white-space: nowrap;
+    font-size: 14px;
+    column-gap: 8px;
+}
+
+.checkbox input {
+    accent-color: #7d2ae8;
+}
+
+.checkbox label {
+    cursor: pointer;
+    user-select: none;
+    color: #0b0217;
+}
+
+/*####################### Form Buttons  #######################*/
+.form-container .button {
+    background: #7d2ae8;
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: #F4F8D3;
+}
+
+/*####################### Signup/Login Links #######################*/
+.login_signup {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login_signup a {
+    color: #7d2ae8;
+}
+
+.login_signup a:hover {
+    text-decoration: underline;
+}

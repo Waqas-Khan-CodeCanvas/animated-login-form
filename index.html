@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated-Login-Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+    <!--######################### Navigation Bar #########################-->
+        <nav>
+            <a href="#" class="nav_logo">CodeCanvas</a>
+            <ul class="nav_items">
+                <li class="nav_item">
+
+                    <a href="#" class="nav_link">home</a>
+                    <a href="#" class="nav_link">Products</a>
+                    <a href="#" class="nav_link">Services</a> 
+                    <a href="#" class="nav_link">Contact</a>
+                </li>
+            </ul>
+            <button class="button" id="form-open">Login</button>
+        </nav>
+    </header>
+
+
+    <!--######################### Home Section  #########################-->
+    <section class="home">
+        <h1 class="hero-section-content">Waqas Khan</h1>
+        <div class="form-container">
+            <!-- Close button for form -->
+            <i class="fa-solid fa-xmark form_close"></i>
+
+            <!-- Login Form -->
+            <div class="form login_form">
+                <form action="#">
+                    <h2>Login</h2>
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter Email" required>
+                        <i class="fa-solid fa-envelope email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Enter Password" required>
+                        <i class="fa-solid fa-lock password"></i>
+                        <i class="fa-solid fa-eye-slash pw_hide"></i>
+                    </div>
+
+                    <div class="option_field">
+                        <span class="checkbox">
+                            <input type="checkbox" id="check1">
+                            <label for="check1">Remember me</label>
+                        </span>
+                        <a href="#" class="forget_pw">Forgot password</a> <!-- Fixed typo -->
+                    </div>
+
+                    <button class="button">Login Now</button>
+
+                    <div class="login_signup">
+                        Don't have an account? <a href="#" id="signup">Signup</a>
+                    </div>
+                </form>
+            </div>
+
+
+              <!--######################### Signup Form #########################-->
+            <div class="form signup_form">
+                <form action="#">
+                    <h2>Signup</h2>
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter Your Email" required>
+                        <i class="fa-solid fa-envelope email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Enter Your Password" required>
+                        <i class="fa-solid fa-lock password"></i>
+                        <i class="fa-solid fa-eye-slash pw_hide"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Confirm Your Password" required>
+                        <i class="fa-solid fa-lock password"></i>
+                        <i class="fa-solid fa-eye-slash pw_hide"></i>
+                    </div>
+
+                    <div class="option_field">
+                        <span class="checkbox">
+                            <input type="checkbox" id="check2">
+                            <label for="check2">Remember me</label>
+                        </span>
+                        <a href="#" class="forget_pw">Forgot password</a> <!-- Fixed typo -->
+                    </div>
+
+                    <button class="button">Signup Now</button>
+
+                    <div class="login_signup">
+                        Already have an account? <a href="#" id="login">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--######################### inking external JavaScript file  #########################-->
+    <script src="./script.js"></script>
+</body>
+</html>

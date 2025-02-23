@@ -1,10 +1,11 @@
-# 🚀 Animated Login Form
+# 🚀 Animated Login Form 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/93c74265-4841-4cc4-acf6-bb712db12abc/deploy-status)](https://app.netlify.com/sites/loginform-animated/deploys)
 
 A sleek and modern **Animated Login Form** built using **HTML, CSS, and JavaScript**. This project features smooth animations, a responsive design, and an interactive password visibility toggle. 💡
 ---
 
-## 🔗 Live Demo
-[Check it out on Netlify](#) 
+## 🔗 Check it out on Netlify
+[Live Demo](https://loginform-animated.netlify.app/) 
 ---
 
 ## 🌟 Features

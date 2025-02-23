@@ -31,7 +31,7 @@ animated-login-form/
 ## 🚀 Getting Started
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/yourusername/animated-login-form.git
+git clone https://github.com/Waqas-Khan-CodeCanvas/animated-login-form.git
 ```
 ### 2️⃣ Open in Browser
 Simply open the `index.html` file in your browser to see the form in action! 🌐
